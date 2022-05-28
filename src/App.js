@@ -6,8 +6,8 @@ import Inputbox from './Components/Inputbox';
 function App() {
   return (
     <div className="App">
-    <Empty/>
-    <Ballon/>
+    {/* <Empty/> */}
+    {/* <Ballon/> */}
     <Inputbox/>
     </div>
   );
