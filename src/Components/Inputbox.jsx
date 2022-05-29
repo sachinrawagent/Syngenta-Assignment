@@ -60,13 +60,26 @@ function Inputbox() {
     }
   return (
       <>
-     
+      <Ballon
+        order={order}
+        setOrder={setOrder}
+        setC1={setC1}
+        setC2={setC2}
+        setC3={setC3}
+        setC4={setC4}
+        setC5={setC5}
+        c1={c1}
+        c2={c2}
+        c3={c3}
+        c4={c4}
+        c5={c5}
+      />
     <div className='box'>
         <input type="number" className='num' onChange={get} value={data.num} placeholder="enter number" required/>
         <br/>
         <button style={{width:"150px",fontWeight:"bolder"}} onClick={submit}>shoot</button>
     </div>
-    <Ballon data={data}/>
+    
     </>
   )
 }
