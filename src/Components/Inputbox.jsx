@@ -17,13 +17,46 @@ function Inputbox() {
     const [c5, setC5] = useState({});
     const submit=(e)=>{
         e.preventDefault();
-        // if(data ==="1"|| data ==="2"|| data==="3"|| data==="4"|| data==="5"){
-        //     alert("wrong");
-        // }
-        // else{
-        //     console.log(data);
-        // }
-        console.log(data);
+        var prodItems;
+        if (data.num === "1") {
+          prodItems = {
+            color: "c1",
+          };
+          setC1({
+            color: "c1",
+          });
+        } else if (data.num === "2") {
+          prodItems = {
+            color: "c2",
+          };
+          setC2({
+            color: "c2",
+          });
+        } else if (data.num === "3") {
+          prodItems = {
+            color: "c3",
+          };
+          setC3({
+            color: "c3",
+          });
+        } else if (data.num === "4") {
+          prodItems = {
+            color: "c4",
+          };
+          setC4({
+            color: "c4",
+          });
+        } else if (data.num === "5") {
+          prodItems = {
+            color: "c5",
+          };
+          setC5({
+            color: "c5",
+          });
+        }
+    
+        setOrder([...order, prodItems]);
+        
     }
   return (
       <>
