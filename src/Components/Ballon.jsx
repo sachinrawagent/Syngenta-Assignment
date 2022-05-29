@@ -60,7 +60,13 @@ function Ballon({
           </>
         ))}
     </div>
-    
+      <div>
+        <div id={c1.color === "c1" ? "d1" : "c1"} className="ballon"></div>
+        <div id={c2.color === "c2" ? "d2" : "c2"} className="ballon"></div>
+        <div id={c3.color === "c3" ? "d3" : "c3"} className="ballon"></div>
+        <div id={c4.color === "c4" ? "d4" : "c4"} className="ballon"></div>
+        <div id={c5.color === "c5" ? "d5" : "c5"} className="ballon"></div>
+      </div>
     </>
 
   )
