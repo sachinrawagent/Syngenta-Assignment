@@ -14,33 +14,53 @@ function Ballon({
   setC4,
   setC5,
 }) {
+  const handleColor = (color) => {
+    setOrder((order) => {
+      return order.filter((elem, index) => {
+        return elem.color !== color;
+      });
+    });
+  };
 
-  const [order,setOrder]=useState("")
-  
-//   if(data.num == "1"){
-// document.getElementById("c1").color="red"
-// document.getElementById("d1").display="block"
-//   }
-// const ids=()=>{
-// document.getElementById("c1").color="red"
-// console.log("clicked");
-// }
+  const handleFilter = (color) => {
+    if (color === "c1") {
+      setC1({
+        color: "d1",
+      });
+    } else if (color === "c2") {
+      setC2({
+        color: "d2",
+      });
+    } else if (color === "c3") {
+      setC3({
+        color: "d3",
+      });
+    } else if (color === "c4") {
+      setC4({
+        color: "d4",
+      });
+    } else if (color === "c5") {
+      setC5({
+        color: "d5",
+      });
+    }
+  };
   return (
     <>
     <div className='empty'>
-    <div id='d1' className='ballon'></div>
-        <div id='d2' className='ballon'></div>
-        <div id='d3' className='ballon'></div>
-        <div id='d4' className='ballon'></div>
-        <div id='d5' className='ballon'></div>
+    {order.map((e, index) => (
+          <>
+            <div
+              id={e.color}
+              onClick={() => handleColor(e.color) || handleFilter(e.color)}
+              className="ballons"
+            >
+              a
+            </div>
+          </>
+        ))}
     </div>
-    <div>
-        <div id='c1' className='ballon' onClick={ids}></div>
-        <div id='c2' className='ballon'></div>
-        <div id='c3' className='ballon'></div>
-        <div id='c4' className='ballon'></div>
-        <div id='c5' className='ballon'></div>
-    </div>
+    
     </>
 
   )
