@@ -1,6 +1,19 @@
 import React,{useState} from 'react'
 
-function Ballon({data}) {
+function Ballon({ 
+  order,
+  c1,
+  c2,
+  c3,
+  c4,
+  c5,
+  setOrder,
+  setC1,
+  setC2,
+  setC3,
+  setC4,
+  setC5,
+}) {
 
   const [order,setOrder]=useState("")
   
